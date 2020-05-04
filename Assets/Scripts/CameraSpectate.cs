@@ -1,20 +1,64 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO.IsolatedStorage;
 using System.Numerics;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 
+
 public class CameraSpectate : MonoBehaviour
 {
 
-	public GameObject tree;
+	
 
 	Vector2 rotation = new Vector2(0, 0);
 	public float speed = 3;
 	public float flyspeed;
+
+	public int selector = 0;
+
+	public GameObject[] spawnObject = new GameObject[2];
+	public String[] spawnObjectName = new String[2];
+
+	
+
+
+
+	private void Start()
+	{
+
+		
+		
+
+
+	}
+
+	void Select()
+	{
+
+
+		if (Input.GetKeyDown(KeyCode.T))
+		{
+			selector++; Debug.Log(selector);
+		}
+		if (Input.GetKeyDown(KeyCode.G))
+		{
+			selector--; Debug.Log(selector);
+
+		}
+
+		
+
+	}
+
+
 	void Update()
 	{
+		Select();
+
+
+
 		rotation.y += Input.GetAxis("Mouse X");
 		rotation.x += -Input.GetAxis("Mouse Y");
 		transform.eulerAngles = (Vector2)rotation * speed;
@@ -42,11 +86,16 @@ public class CameraSpectate : MonoBehaviour
 
 		Debug.Log(hit.transform.position);
 
+		Debug.DrawRay(transform.position, transform.forward*hit.distance, Color.green);
+
 		//bool hasspawned = false;
 
-			if(Input.GetMouseButtonDown(0))
+	    if(Input.GetMouseButtonDown(0))
 		{
-			Instantiate(tree, transform.position+transform.forward*hit.distance, tree.transform.rotation);
+
+
+
+			Instantiate(spawnObject[selector], transform.position+transform.forward*hit.distance, spawnObject[selector].transform.rotation);
 			//hasspawned = true;
 		
 		}

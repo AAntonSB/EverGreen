@@ -95,7 +95,7 @@ MonoBehaviour:
   trunks: {fileID: 0}
   leaves: {fileID: 0}
   hasDecreasingBranches: 1
-  decreasingBranchesRate: 0.047
+  decreasingBranchesRate: 0.106
   isGeneratingBranch: 0
   leaf: {fileID: 0}
   fruit: {fileID: 0}
@@ -104,24 +104,25 @@ MonoBehaviour:
   smallerBranchesRate: 0.364
   planeHeight: 1
   isShorterBranchesHigherUp: 0
-  branchLength: 8
+  branchLengthMin: 4
+  branchLengthMax: 42
   isnotspawningbranchesbelow: 1
-  branchSpawnStartHeightMax: 18
-  branchSpawnStartHeightMin: 4
+  branchSpawnStartHeightMax: 6
+  branchSpawnStartHeightMin: 2
   hasLeaves: 1
   hasFruit: 0
   isRotateTrunk: 1
   currectTreeHeight: 0
-  randomVerticeHeight: 0.071
-  randomVerticeWidth: 0.051
+  randomVerticeHeight: 0.222
+  randomVerticeWidth: 0.213
   randomTrunkHeight: 0
-  randomRadiusRange: 1.67
+  randomRadiusRange: 3.89
   BranchSpawnChance: 9.5
-  LeafSpawnChance: 25
-  branchesAmount: 4
-  treeHeightmin: 16
-  treeHeightmax: 33
-  branchRotationRandom: 8.58
+  LeafSpawnChance: 11.9
+  branchesAmount: 2
+  treeHeightmin: 68
+  treeHeightmax: 97
+  branchRotationRandom: 3.81
   trunkColor: {r: 0, g: 0, b: 0, a: 0}
   leavesColor: {r: 0, g: 0, b: 0, a: 0}
   createBranchesv1: []
