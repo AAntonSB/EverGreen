@@ -1,20 +1,32 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections;
+=======
+﻿using System.Collections;
+>>>>>>> Träd
 using System.Collections.Generic;
 using System.IO.IsolatedStorage;
 using System.Numerics;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 
+<<<<<<< HEAD
 
 public class CameraSpectate : MonoBehaviour
 {
 
 	
+=======
+public class CameraSpectate : MonoBehaviour
+{
+
+	public GameObject tree;
+>>>>>>> Träd
 
 	Vector2 rotation = new Vector2(0, 0);
 	public float speed = 3;
 	public float flyspeed;
+<<<<<<< HEAD
 
 	public int selector = 0;
 
@@ -59,6 +71,10 @@ public class CameraSpectate : MonoBehaviour
 
 
 
+=======
+	void Update()
+	{
+>>>>>>> Träd
 		rotation.y += Input.GetAxis("Mouse X");
 		rotation.x += -Input.GetAxis("Mouse Y");
 		transform.eulerAngles = (Vector2)rotation * speed;
@@ -86,6 +102,7 @@ public class CameraSpectate : MonoBehaviour
 
 		Debug.Log(hit.transform.position);
 
+<<<<<<< HEAD
 		Debug.DrawRay(transform.position, transform.forward*hit.distance, Color.green);
 
 		//bool hasspawned = false;
@@ -96,6 +113,13 @@ public class CameraSpectate : MonoBehaviour
 
 
 			Instantiate(spawnObject[selector], transform.position+transform.forward*hit.distance, spawnObject[selector].transform.rotation);
+=======
+		//bool hasspawned = false;
+
+			if(Input.GetMouseButtonDown(0))
+		{
+			Instantiate(tree, transform.position+transform.forward*hit.distance, tree.transform.rotation);
+>>>>>>> Träd
 			//hasspawned = true;
 		
 		}
