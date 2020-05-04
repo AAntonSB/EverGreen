@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\TreeManager.cs" />
+    <Compile Include="Assets\Scripts\World Generation\MarchingCubes.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/dev/EverGreen/EverGreen/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
